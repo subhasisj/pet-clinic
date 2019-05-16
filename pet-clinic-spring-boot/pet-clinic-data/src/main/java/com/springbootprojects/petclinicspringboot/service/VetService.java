@@ -6,13 +6,8 @@ import com.springbootprojects.petclinicspringboot.model.Owner;
 import com.springbootprojects.petclinicspringboot.model.Pet;
 import com.springbootprojects.petclinicspringboot.model.Vet;
 
-public interface VetService {
+public interface VetService extends CrudService<Pet, Long> {
 
-	Vet findById( Long id);
-	
-	Vet findByLastName ( String lastName );
-	
-	Vet save( Pet pet );
-	
-	Set<Vet> findAll();
+	Vet findByLastName(String lastName);
+
 }
