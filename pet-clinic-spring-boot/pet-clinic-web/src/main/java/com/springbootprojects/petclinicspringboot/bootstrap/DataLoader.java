@@ -7,8 +7,6 @@ import com.springbootprojects.petclinicspringboot.model.Owner;
 import com.springbootprojects.petclinicspringboot.model.Vet;
 import com.springbootprojects.petclinicspringboot.service.OwnerService;
 import com.springbootprojects.petclinicspringboot.service.VetService;
-import com.springbootprojects.petclinicspringboot.service.map.OwnerServiceMap;
-import com.springbootprojects.petclinicspringboot.service.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -48,11 +46,11 @@ public class DataLoader implements CommandLineRunner {
 		System.out.println("Vets Created");
 	}
 
-	protected DataLoader() {
-
-		ownerService =  new OwnerServiceMap();
-		vetService	 =  new VetServiceMap();
-		
+	protected DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
+	
+	
 }
