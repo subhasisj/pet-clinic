@@ -4,7 +4,7 @@ import java.util.Set;
 
 import com.springbootprojects.petclinicspringboot.model.Owner;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements  OwnerService {
 
 	@Override
 	public Owner Save(Owner object) {
@@ -67,6 +67,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	public String toString() {
 		// TODO Auto-generated method stub
 		return super.toString();
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 	
 

@@ -4,11 +4,10 @@ import java.util.Set;
 
 import com.springbootprojects.petclinicspringboot.model.Vet;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
 	public Vet Save(Vet object) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -67,6 +66,12 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements Crud
 	public String toString() {
 		// TODO Auto-generated method stub
 		return super.toString();
+	}
+
+	@Override
+	public Vet findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

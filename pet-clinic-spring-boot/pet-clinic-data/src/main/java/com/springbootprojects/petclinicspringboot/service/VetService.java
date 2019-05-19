@@ -6,7 +6,7 @@ import com.springbootprojects.petclinicspringboot.model.Owner;
 import com.springbootprojects.petclinicspringboot.model.Pet;
 import com.springbootprojects.petclinicspringboot.model.Vet;
 
-public interface VetService extends CrudService<Pet, Long> {
+public interface VetService extends CrudService<Vet, Long> {
 
 	Vet findByLastName(String lastName);
 
