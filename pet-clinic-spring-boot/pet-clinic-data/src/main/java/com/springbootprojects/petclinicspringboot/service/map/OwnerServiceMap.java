@@ -12,8 +12,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
 	@Override
 	public Owner Save(Owner object) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return super.save(object.id, object);
 	}
 
 	@Override
