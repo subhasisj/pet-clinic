@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 import com.springbootprojects.petclinicspringboot.model.Owner;
 import com.springbootprojects.petclinicspringboot.model.Vet;
 import com.springbootprojects.petclinicspringboot.service.OwnerService;
-import com.springbootprojects.petclinicspringboot.service.OwnerServiceMap;
 import com.springbootprojects.petclinicspringboot.service.VetService;
-import com.springbootprojects.petclinicspringboot.service.VetServiceMap;
+import com.springbootprojects.petclinicspringboot.service.map.OwnerServiceMap;
+import com.springbootprojects.petclinicspringboot.service.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {

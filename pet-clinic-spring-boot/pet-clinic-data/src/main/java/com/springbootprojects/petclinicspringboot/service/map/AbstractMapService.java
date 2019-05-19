@@ -1,4 +1,4 @@
-package com.springbootprojects.petclinicspringboot.service;
+package com.springbootprojects.petclinicspringboot.service.map;
 
 import java.util.HashMap;
 import java.util.HashSet;

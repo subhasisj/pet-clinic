@@ -1,8 +1,9 @@
-package com.springbootprojects.petclinicspringboot.service;
+package com.springbootprojects.petclinicspringboot.service.map;
 
 import java.util.Set;
 
 import com.springbootprojects.petclinicspringboot.model.Owner;
+import com.springbootprojects.petclinicspringboot.service.OwnerService;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements  OwnerService {
 

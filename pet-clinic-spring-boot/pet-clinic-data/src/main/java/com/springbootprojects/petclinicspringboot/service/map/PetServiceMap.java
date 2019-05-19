@@ -1,8 +1,9 @@
-package com.springbootprojects.petclinicspringboot.service;
+package com.springbootprojects.petclinicspringboot.service.map;
 
 import java.util.Set;
 
 import com.springbootprojects.petclinicspringboot.model.Pet;
+import com.springbootprojects.petclinicspringboot.service.PetService;
 
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
