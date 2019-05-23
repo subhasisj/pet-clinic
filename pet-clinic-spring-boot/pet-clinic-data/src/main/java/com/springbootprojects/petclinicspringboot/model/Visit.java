@@ -1,3 +1,4 @@
+package com.springbootprojects.petclinicspringboot.model;
 import java.time.LocalDate;
 
 import com.springbootprojects.petclinicspringboot.model.BaseEntity;
