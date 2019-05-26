@@ -4,20 +4,38 @@ import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
+import com.springbootprojects.petclinicspringboot.model.Speciality;
 import com.springbootprojects.petclinicspringboot.model.Vet;
+import com.springbootprojects.petclinicspringboot.service.SpecialityService;
 import com.springbootprojects.petclinicspringboot.service.VetService;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
-	@Override
+	private final SpecialityService specialtiyService;
+
+	protected VetServiceMap(SpecialityService specialtiyService) {
+		this.specialtiyService = specialtiyService;
+	}
+
+@Override
 	public Vet save(Vet object) {
+		
+		if (object.getSpeciality().size() == 0 ) {
+			object.getSpeciality().forEach(  speciality -> {
+				if ( speciality.getId() == null ) {
+					Speciality savedSpeciality = specialtiyService.save(speciality);
+					speciality.setId(savedSpeciality.getId());
+				}
+			});
+		}
+		
 		return super.save( object);
 	}
 
 	@Override
 	public Set<Vet> findAll() {
-	
+
 		return super.findAll();
 	}
 
@@ -57,7 +75,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return super.hashCode(); 
+		return super.hashCode();
 	}
 
 	@Override
@@ -71,6 +89,5 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
 
 }
