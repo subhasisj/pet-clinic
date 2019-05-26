@@ -11,7 +11,7 @@ import com.springbootprojects.petclinicspringboot.service.VetService;
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 	@Override
-	public Vet Save(Vet object) {
+	public Vet save(Vet object) {
 		return super.save( object);
 	}
 

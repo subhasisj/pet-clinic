@@ -11,12 +11,6 @@ import com.springbootprojects.petclinicspringboot.service.PetService;
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
-	public Pet Save(Pet object) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public Set<Pet> findAll() {
 	
 		return super.findAll();
@@ -28,7 +22,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
 	}
 
 	@Override
-	Pet save(Pet object) {
+	public Pet save(Pet object) {
 		// TODO Auto-generated method stub
 		return super.save(object);
 	}
